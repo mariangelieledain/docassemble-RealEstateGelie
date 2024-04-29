@@ -1,0 +1,69 @@
+---
+metadata:
+  title: |
+    Contrato de compra de bienes raices
+  short title: |
+    Real Estate Contract
+  description: |
+    Esta entrevista genera un contrato para la compra de bienes raices
+  authors:
+    - name: John Doe
+      organization: Example, Inc.
+  revision_date: 2016-03-22
+  documentation: "https://docassemble.org/docs/initial.html#metadata"
+---
+question: |
+  Aplica la clausula A?
+yesno: aplica_opcion_a
+---
+question: |
+  Información vendedor
+subquestion: |
+  Debe estar pre-grabado
+fields:
+  - Direccion Vendedor : seller_address
+  - Nombre Vendedor: seller_name
+---
+
+
+
+question: |
+  Datos contrato
+subquestion: |
+  Información general
+fields:
+  - Estado: estado
+    choices:
+      - Puerto Rico
+      - Florida
+      - Georgia
+  - Fecha contrato: agreement_date
+    datatype: date
+---
+question: |
+  Indique su género:
+fields:
+  - Type: gender_type
+    input type: radio
+    choices:
+      - Masculino
+      - Femenino
+      - N/D
+---
+question: |
+  información comprado
+subquestion: |
+  Favor completar
+fields:
+  - Nombre Comprador: buyer_name
+  - Dirección Comprador: buyer_address
+---
+question: Here is your document.
+event: some_event
+attachment:
+  - name: Real-Estate-Purchase-Agreement
+    filename: Real-Estate-Purchase-Agreement
+    docx template file: Real-Estate-Purchase-Agreement.docx
+    
+mandatory: true
+---
